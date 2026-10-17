@@ -1,0 +1,90 @@
+/* Yan Shu refinement: white background, native Lato, blue links, unboxed research. */
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#24272b;font-size:14.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+p,a,strong{font-size:inherit}
+a{color:#1772d0;text-decoration:none}
+a:hover{color:#f09228}
+a:focus-visible{outline:2px solid #1772d0;outline-offset:4px}
+.site{width:100%;max-width:840px;margin:0 auto;padding:28px 20px 24px}
+.profile{display:grid;grid-template-columns:minmax(0,1fr) 232px;gap:40px;align-items:center;margin-bottom:28px}
+.profile-copy{min-width:0;font-size:14.5px}
+.name{padding:0;margin:0 0 14px;font-size:32px;font-weight:400;line-height:1.2;text-align:center}
+.name-chinese{font-size:.75em;font-family:system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:400;white-space:nowrap}
+.profile-copy>p{margin:0 0 10px;line-height:1.5}
+.profile-copy>.contact-links{margin:16px 0 0;line-height:1.5}
+.advisor-name{white-space:nowrap}
+.portrait-link{display:block}
+.profile-photo{display:block;width:232px;height:232px;aspect-ratio:1;object-fit:cover;object-position:center bottom;border-radius:14px}
+.yan-section{margin:0 0 28px}
+h2{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:400;color:#202327}
+.news-list{margin:0;padding-left:20px}
+.news-list li{padding-left:2px}
+.news-list li+li{margin-top:6px}
+.news-date{font-variant-numeric:tabular-nums}
+.research-interests{margin:0 0 18px}
+.publication{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:center;margin:0}
+.publication+.publication{margin-top:30px}
+.paper-image{display:block}
+.publication-image{display:block;width:100%;height:auto}
+.publication-still{display:none}
+.publication-copy{font-size:14px;line-height:1.5;min-width:0}
+.publication-title{margin:0 0 6px;font-size:15.5px;line-height:1.4;font-weight:700}
+.papertitle{font-size:inherit;font-weight:inherit}
+.publication-authors{margin:0 0 4px}
+.publication-venue{margin:0 0 4px}
+.oral{color:#bd382c;font-weight:700}
+.paper-links{margin:0 0 8px;font-size:14px}
+.paper-summary{margin:0;color:#5c636c;font-size:13.5px;line-height:1.55}
+.education-body{position:relative}
+.institution-logo{position:absolute;top:4px;left:0;display:block;width:128px;height:auto}
+.school-heading{padding-left:152px;min-height:43px;margin:16px 0 14px}
+.school-heading strong{font-size:15px}
+.school-heading>span{font-size:13.5px;color:#606771}
+.education-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:18px;row-gap:2px;margin:11px 0 0}
+.degree{font-weight:700}
+.entry-date{color:#626a74;font-size:13px;font-variant-numeric:tabular-nums}
+.education-entry .entry-note{grid-column:1/-1;color:#626a74;font-size:13px}
+.experience-list{list-style:none;margin:0;padding:0}
+.experience-entry{display:grid;grid-template-columns:128px minmax(0,1fr);column-gap:24px;align-items:center;margin:0 0 22px}
+.experience-entry:last-child{margin-bottom:0}
+.experience-logo{display:flex;align-items:center;justify-content:center;min-height:60px;width:128px}
+.experience-logo img{display:block;max-width:100%;max-height:52px;width:auto;height:auto}
+.experience-logo img[src$="yinwang-logo.png"]{width:96px}
+.experience-copy{min-width:0}
+.experience-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:3px}
+.experience-heading .entry-date{flex-shrink:0}
+.experience-heading strong{font-size:14.5px}
+.experience-entry .entry-note,.experience-mentors{font-size:13.5px;color:#626a74;margin-top:2px}
+.experience-direction{margin-top:2px}
+.honors-list{padding:0;margin:0;list-style:none}
+.honors-list li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;margin:9px 0}
+.award-year{font-size:13px;color:#626a74;padding-top:2px;font-variant-numeric:tabular-nums}
+.award-detail{display:block;font-size:13px;line-height:1.45;color:#626a74;margin-top:2px}
+.award-detail strong{color:#424952}
+.service p{margin:0}
+.footer{margin-top:34px;padding-top:16px;border-top:1px solid #e9edf1;display:flex;justify-content:center;text-align:center;gap:12px;flex-wrap:wrap;font-size:12px;color:#79818c}
+.footer a{font-size:inherit}
+@media(max-width:650px){
+.site{padding:24px 20px}
+.profile{display:flex;flex-direction:column-reverse;gap:22px;margin-bottom:26px}
+.profile-copy{width:100%}
+.profile-photo{width:200px;height:200px}
+.name{font-size:30px}
+.profile-copy>.contact-links{margin-top:14px}
+.yan-section{margin-bottom:26px}
+.publication{grid-template-columns:1fr;gap:14px}
+.paper-image{max-width:400px;margin:0 auto;width:100%}
+.publication-title{font-size:15.5px}
+.publication-copy{font-size:14px}
+.education-entry{grid-template-columns:1fr;gap:1px;margin-top:13px}
+.institution-logo{position:static;width:132px;margin:4px 0 12px}
+.school-heading{padding-left:0;min-height:0;margin:0 0 12px}
+.experience-entry{grid-template-columns:72px minmax(0,1fr);column-gap:16px;align-items:start}
+.experience-logo{width:72px;min-height:44px;margin-top:2px}
+.experience-logo img{max-height:40px}
+.experience-heading{display:block;margin-bottom:4px}
+.experience-heading .entry-date{display:block;margin-top:2px}
+.footer{margin-top:28px;justify-content:center;text-align:center}
+.footer span{display:block;width:100%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.publication-motion{display:none}.publication-still{display:block}}
