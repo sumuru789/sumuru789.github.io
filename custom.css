@@ -1,90 +1,368 @@
-/* Yan Shu refinement: white background, native Lato, blue links, unboxed research. */
-*{box-sizing:border-box}
-body{margin:0;background:#fff;color:#24272b;font-size:14.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
-p,a,strong{font-size:inherit}
-a{color:#1772d0;text-decoration:none}
-a:hover{color:#f09228}
-a:focus-visible{outline:2px solid #1772d0;outline-offset:4px}
-.site{width:100%;max-width:840px;margin:0 auto;padding:28px 20px 24px}
-.profile{display:grid;grid-template-columns:minmax(0,1fr) 232px;gap:40px;align-items:center;margin-bottom:28px}
-.profile-copy{min-width:0;font-size:14.5px}
-.name{padding:0;margin:0 0 14px;font-size:32px;font-weight:400;line-height:1.2;text-align:center}
-.name-chinese{font-size:.75em;font-family:system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:400;white-space:nowrap}
-.profile-copy>p{margin:0 0 10px;line-height:1.5}
-.profile-copy>.contact-links{margin:16px 0 0;line-height:1.5}
-.advisor-name{white-space:nowrap}
-.portrait-link{display:block}
-.profile-photo{display:block;width:232px;height:232px;aspect-ratio:1;object-fit:cover;object-position:center bottom;border-radius:14px}
-.yan-section{margin:0 0 28px}
-h2{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:400;color:#202327}
-.news-list{margin:0;padding-left:20px}
-.news-list li{padding-left:2px}
-.news-list li+li{margin-top:6px}
-.news-date{font-variant-numeric:tabular-nums}
-.research-interests{margin:0 0 18px}
-.publication{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:center;margin:0}
-.publication+.publication{margin-top:30px}
-.paper-image{display:block}
-.publication-image{display:block;width:100%;height:auto}
-.publication-still{display:none}
-.publication-copy{font-size:14px;line-height:1.5;min-width:0}
-.publication-title{margin:0 0 6px;font-size:15.5px;line-height:1.4;font-weight:700}
-.papertitle{font-size:inherit;font-weight:inherit}
-.publication-authors{margin:0 0 4px}
-.publication-venue{margin:0 0 4px}
-.oral{color:#bd382c;font-weight:700}
-.paper-links{margin:0 0 8px;font-size:14px}
-.paper-summary{margin:0;color:#5c636c;font-size:13.5px;line-height:1.55}
-.education-body{position:relative}
-.institution-logo{position:absolute;top:4px;left:0;display:block;width:128px;height:auto}
-.school-heading{padding-left:152px;min-height:43px;margin:16px 0 14px}
-.school-heading strong{font-size:15px}
-.school-heading>span{font-size:13.5px;color:#606771}
-.education-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:18px;row-gap:2px;margin:11px 0 0}
-.degree{font-weight:700}
-.entry-date{color:#626a74;font-size:13px;font-variant-numeric:tabular-nums}
-.education-entry .entry-note{grid-column:1/-1;color:#626a74;font-size:13px}
-.experience-list{list-style:none;margin:0;padding:0}
-.experience-entry{display:grid;grid-template-columns:128px minmax(0,1fr);column-gap:24px;align-items:center;margin:0 0 22px}
-.experience-entry:last-child{margin-bottom:0}
-.experience-logo{display:flex;align-items:center;justify-content:center;min-height:60px;width:128px}
-.experience-logo img{display:block;max-width:100%;max-height:52px;width:auto;height:auto}
-.experience-logo img[src$="huawei-logo.png"]{width:128px}
-.experience-copy{min-width:0}
-.experience-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:3px}
-.experience-heading .entry-date{flex-shrink:0}
-.experience-heading strong{font-size:14.5px}
-.experience-entry .entry-note,.experience-mentors{font-size:13.5px;color:#626a74;margin-top:2px}
-.experience-direction{margin-top:2px}
-.honors-list{padding:0;margin:0;list-style:none}
-.honors-list li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;margin:9px 0}
-.award-year{font-size:13px;color:#626a74;padding-top:2px;font-variant-numeric:tabular-nums}
-.award-detail{display:block;font-size:13px;line-height:1.45;color:#626a74;margin-top:2px}
-.award-detail strong{color:#424952}
-.service p{margin:0}
-.footer{margin-top:34px;padding-top:16px;border-top:1px solid #e9edf1;display:flex;justify-content:center;text-align:center;gap:12px;flex-wrap:wrap;font-size:12px;color:#79818c}
-.footer a{font-size:inherit}
-@media(max-width:650px){
-.site{padding:24px 20px}
-.profile{display:flex;flex-direction:column-reverse;gap:22px;margin-bottom:26px}
-.profile-copy{width:100%}
-.profile-photo{width:200px;height:200px}
-.name{font-size:30px}
-.profile-copy>.contact-links{margin-top:14px}
-.yan-section{margin-bottom:26px}
-.publication{grid-template-columns:1fr;gap:14px}
-.paper-image{max-width:400px;margin:0 auto;width:100%}
-.publication-title{font-size:15.5px}
-.publication-copy{font-size:14px}
-.education-entry{grid-template-columns:1fr;gap:1px;margin-top:13px}
-.institution-logo{position:static;width:132px;margin:4px 0 12px}
-.school-heading{padding-left:0;min-height:0;margin:0 0 12px}
-.experience-entry{grid-template-columns:72px minmax(0,1fr);column-gap:16px;align-items:start}
-.experience-logo{width:72px;min-height:44px;margin-top:2px}
-.experience-logo img{max-height:40px}
-.experience-heading{display:block;margin-bottom:4px}
-.experience-heading .entry-date{display:block;margin-top:2px}
-.footer{margin-top:28px;justify-content:center;text-align:center}
-.footer span{display:block;width:100%}
+/* Han Su — academic homepage. Single stylesheet; fonts are declared in fonts.css. */
+
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --ink: #15171b;
+  --text: #2e3238;
+  --muted: #646b75;
+  --line: #e6e4dd;
+  --accent: #2c50c8;
+  --accent-soft: #edf0fc;
+  --oral: #b3341f;
+  --oral-soft: #fcebe6;
+  --shadow: 0 1px 2px rgba(20, 23, 28, .04), 0 8px 24px rgba(20, 23, 28, .06);
+  --shadow-lift: 0 2px 4px rgba(20, 23, 28, .05), 0 14px 34px rgba(20, 23, 28, .10);
+  color-scheme: light;
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.publication-motion{display:none}.publication-still{display:block}}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color .15s ease, color .15s ease;
+}
+a:hover { text-decoration-color: currentColor; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+strong { font-weight: 700; color: var(--ink); }
+p { margin: 0; }
+.nowrap { white-space: nowrap; }
+
+.site {
+  position: relative;
+  width: 100%;
+  max-width: 904px;
+  margin: 0 auto;
+  padding: 56px 32px 40px;
+}
+
+/* Profile */
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 216px;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.name {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+.name-chinese {
+  margin-left: 6px;
+  color: var(--muted);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  font-size: .5em;
+  font-weight: 400;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+.profile-copy > p { max-width: 58ch; }
+.profile-copy > p + p { margin-top: 12px; }
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin-top: 22px;
+}
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 0;
+  color: var(--ink);
+  font-size: 14.5px;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: border-color .15s ease, color .15s ease, transform .15s ease;
+}
+.contact-links a:hover {
+  color: var(--accent);
+}
+.contact-links svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.contact-links svg.icon-fill { fill: currentColor; stroke: none; }
+
+.profile-photo {
+  display: block;
+  width: 216px;
+  height: 216px;
+  object-fit: cover;
+  object-position: center bottom;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+/* Sections */
+.yan-section { margin: 0 0 52px; }
+.yan-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 22px;
+  color: var(--accent);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  text-transform: none;
+}
+.yan-section h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+/* Dated lists: news, honors, service */
+:is(.news-list, .honors-list) { margin: 0; padding: 0; list-style: none; }
+:is(.news-list, .honors-list) li {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  column-gap: 16px;
+  align-items: baseline;
+}
+:is(.news-list, .honors-list) li + li { margin-top: 10px; }
+.news-date, .award-year, .entry-date {
+  color: var(--muted);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .01em;
+}
+.award-detail {
+  display: block;
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.award-detail strong { color: var(--text); }
+
+/* Publications */
+.publication {
+  display: grid;
+  grid-template-columns: 292px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+.publication + .publication { margin-top: 18px; }
+.publication:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+.paper-image {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+}
+.publication-image { display: block; width: 100%; height: auto; }
+.publication-still { display: none; }
+.publication-copy { min-width: 0; padding: 2px 6px 2px 0; }
+
+.publication-venue { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 9px; }
+.badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: .04em;
+}
+.oral { padding: 2px 10px; border-radius: 999px; font-size: 12px; line-height: 1.6; background: var(--oral-soft); color: var(--oral); }
+
+.publication-title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -.005em;
+}
+.publication-title a { color: var(--ink); text-decoration: none; }
+.publication-title a:hover { color: var(--accent); }
+.publication-authors { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+.paper-summary { margin-top: 8px; font-size: 14.5px; line-height: 1.6; }
+
+.paper-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 12px; }
+.paper-links a {
+  padding: 2px 0;
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: border-color .15s ease, background-color .15s ease, color .15s ease;
+}
+.paper-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Education and experience */
+.education-body, .experience-entry {
+  display: grid;
+  grid-template-columns: 136px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.institution-logo {
+  display: block;
+  width: 136px;
+  height: auto;
+  margin-top: 9px;
+}
+.school-heading { margin: 0; }
+.school-heading strong, .experience-heading strong { font-size: 17px; line-height: 1.4; }
+.school-heading > span, .entry-note, .experience-mentors {
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.education-timeline {
+  margin: 18px 0 0 4px;
+  padding: 2px 0 2px 22px;
+  border-left: 1.5px solid var(--line);
+}
+.education-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2px 16px;
+}
+.education-entry + .education-entry { margin-top: 16px; }
+.education-entry::before {
+  content: "";
+  position: absolute;
+  top: .52em;
+  left: -28px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--bg);
+}
+.education-entry.is-current::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.education-entry .entry-note { grid-column: 1 / -1; }
+.degree { color: var(--ink); font-weight: 700; }
+.experience-list { margin: 0; padding: 0; list-style: none; }
+.experience-entry + .experience-entry { margin-top: 28px; }
+.experience-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 68px;
+  width: 136px;
+}
+.experience-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+}
+.experience-logo[href*="meshy.ai"] {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #17181a;
+}
+.experience-copy { min-width: 0; }
+.experience-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+.entry-date { flex: none; white-space: nowrap; }
+.experience-direction, .experience-mentors { margin-top: 2px; }
+.entry-note strong { color: var(--text); }
+
+/* Footer */
+.footer {
+  margin-top: 64px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+  .publication-motion { display: none; }
+  .publication-still { display: block; }
+}
+
+/* Narrow screens */
+@media (max-width: 720px) {
+  body { font-size: 15.5px; }
+  .site { padding: 32px 20px; }
+  .profile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .profile-photo { width: 124px; height: 124px; border-radius: 20px; }
+  .name { font-size: 36px; margin-bottom: 14px; }
+  .yan-section { margin-bottom: 44px; }
+  .yan-section h2 { margin-bottom: 18px; }
+  :is(.news-list, .honors-list) li { grid-template-columns: 64px minmax(0, 1fr); column-gap: 12px; }
+  .publication { grid-template-columns: 1fr; gap: 16px; padding: 14px; }
+  .publication-copy { padding: 0 4px 4px; }
+  .publication-title { font-size: 17px; }
+  .education-body, .experience-entry { grid-template-columns: 1fr; row-gap: 14px; }
+  .institution-logo { width: 132px; margin-top: 0; }
+  .experience-logo { width: 132px; min-height: 56px; }
+  .experience-heading, .education-entry { display: block; }
+  .experience-heading .entry-date, .education-entry .entry-date { display: block; margin-top: 2px; }
+  .education-entry + .education-entry { margin-top: 16px; }
+}
+
+.badge { font-style: normal; }
+.papertitle { font-size: inherit; font-weight: inherit; }
+.advisor-name { white-space: nowrap; }
